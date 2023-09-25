@@ -1,6 +1,6 @@
 // Base Imports 
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 // Components 
 import Layout from './components/Layout';
 import Info from './pages/lnfo';
@@ -11,7 +11,7 @@ import Confirmation from './pages/Confirmation';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Info />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path='confirmation' element={<Confirmation />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
