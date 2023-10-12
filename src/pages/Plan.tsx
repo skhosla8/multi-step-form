@@ -307,7 +307,7 @@ const Plan: FC = () => {
 
                         <div>
                             Arcade
-                            <span>${planPricing.arcade}/{billingType}</span>
+                            <span data-cy='plan-pricing'>${planPricing.arcade}/{billingType}</span>
                         </div>
                     </StyledPlanOption>
 
@@ -316,7 +316,7 @@ const Plan: FC = () => {
 
                         <div>
                             Advanced
-                            <span>${planPricing.advanced}/{billingType}</span>
+                            <span data-cy='plan-pricing'>${planPricing.advanced}/{billingType}</span>
                         </div>
 
                     </StyledPlanOption>
@@ -326,7 +326,7 @@ const Plan: FC = () => {
 
                         <div>
                             Pro
-                            <span>${planPricing.pro}/{billingType}</span>
+                            <span data-cy='plan-pricing'>${planPricing.pro}/{billingType}</span>
                         </div>
                     </StyledPlanOption>
                 </StyledPlanOptions>

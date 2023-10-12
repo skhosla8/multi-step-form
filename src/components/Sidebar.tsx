@@ -77,7 +77,7 @@ const Sidebar: FC = ( ) => {
         <StyledSidebar $bgimg={bgSidebarDesktop}>
             <nav>
                 <NavItem>
-                    <NavItemBullet $currentstep={currentStep} $textcontent={1}>1</NavItemBullet>
+                    <NavItemBullet data-cy='sidebar-bullet-info' $currentstep={currentStep} $textcontent={1}>1</NavItemBullet>
 
                     <NavItemText>
                         STEP 1
@@ -86,7 +86,7 @@ const Sidebar: FC = ( ) => {
                 </NavItem>
 
                 <NavItem>
-                    <NavItemBullet $currentstep={currentStep} $textcontent={2}>2</NavItemBullet>
+                    <NavItemBullet data-cy='sidebar-bullet-plan' $currentstep={currentStep} $textcontent={2}>2</NavItemBullet>
 
                     <NavItemText>
                         STEP 2
@@ -95,7 +95,7 @@ const Sidebar: FC = ( ) => {
                 </NavItem>
 
                 <NavItem>
-                    <NavItemBullet $currentstep={currentStep} $textcontent={3}>3</NavItemBullet>
+                    <NavItemBullet data-cy='sidebar-bullet-add-ons' $currentstep={currentStep} $textcontent={3}>3</NavItemBullet>
 
                     <NavItemText>
                         STEP 3
@@ -104,7 +104,7 @@ const Sidebar: FC = ( ) => {
                 </NavItem>
 
                 <NavItem>
-                    <NavItemBullet $currentstep={currentStep} $textcontent={4}>4</NavItemBullet>
+                    <NavItemBullet data-cy='sidebar-bullet-summary' $currentstep={currentStep} $textcontent={4}>4</NavItemBullet>
 
                     <NavItemText>
                         STEP 4

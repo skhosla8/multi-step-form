@@ -114,7 +114,7 @@ const Info: FC = () => {
                 <div>
                     <StyledLabel htmlFor='name'>Name</StyledLabel>
                     {nameError &&
-                        <StyledError>This field is required</StyledError>
+                        <StyledError data-cy='info-error-name'>This field is required</StyledError>
                     }
                 </div>
 
@@ -122,6 +122,7 @@ const Info: FC = () => {
                     type='text'
                     id='name'
                     placeholder='e.g. Stephen King'
+                    data-cy='info-name'
                     value={info.name}
                     onChange={(e) => handleChange('name', e)}
                     $error={nameError} />
@@ -129,7 +130,7 @@ const Info: FC = () => {
                 <div>
                     <StyledLabel htmlFor='email'>Email Address</StyledLabel>
                     {emailError &&
-                        <StyledError>This field is required</StyledError>
+                        <StyledError data-cy='info-error-email'>This field is required</StyledError>
                     }
                 </div>
 
@@ -137,6 +138,7 @@ const Info: FC = () => {
                     type='text'
                     id='email'
                     placeholder='e.g. stephenking@lorem.com'
+                    data-cy='info-email'
                     value={info.email}
                     onChange={(e) => handleChange('email', e)}
                     $error={emailError} />
@@ -144,7 +146,7 @@ const Info: FC = () => {
                 <div>
                     <StyledLabel htmlFor='phone'>Phone Number</StyledLabel>
                     {phoneError &&
-                        <StyledError>This field is required</StyledError>
+                        <StyledError data-cy='info-error-phone'>This field is required</StyledError>
                     }
                 </div>
 
@@ -152,6 +154,7 @@ const Info: FC = () => {
                     type='text'
                     id='phone'
                     placeholder='e.g. +1 234 567 890'
+                    data-cy='info-phone'
                     value={info.phone}
                     onChange={(e) => handleChange('phone', e)}
                     $error={phoneError} />

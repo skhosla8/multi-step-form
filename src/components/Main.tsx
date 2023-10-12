@@ -3,7 +3,7 @@ import React, { FC, ReactElement, Dispatch, SetStateAction } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../index.css';
 import styled from 'styled-components';
-import {AddOn } from '../pages/AddOns';
+import { AddOn } from '../pages/AddOns';
 
 interface StyledContainerProps {
     $currentstep: number;
@@ -131,11 +131,15 @@ const Main: FC<MainProps> = ({
                 navigate('/plan', { state: { ...location.state, info: info } });
             }
         } else if (currentStep === 2) {
-            navigate('/add-ons', { state: { ...location.state, plan: selectedPlan } });
+            if (Object.values(selectedPlan!).every((v) => v !== '')) {
+                navigate('/add-ons', { state: { ...location.state, plan: selectedPlan } });
+            }
         } else if (currentStep === 3) {
-            navigate('/summary', {state: {...location.state, addOns }});
+            if (addOns?.length) {
+                navigate('/summary', { state: { ...location.state, addOns } });
+            }
         } else if (currentStep === 4) {
-            navigate('/confirmation', {state: {...location.state }});
+            navigate('/confirmation', { state: { ...location.state } });
         }
     };
 
@@ -143,11 +147,11 @@ const Main: FC<MainProps> = ({
         if (currentStep === 2) {
             navigate('/', { state: { ...location.state, info: storedPersonalInfo, plan: selectedPlan } });
         } else if (currentStep === 3) {
-           navigate('/plan', { state: { ...location.state, addOns } });
+            navigate('/plan', { state: { ...location.state, addOns } });
         } else if (currentStep === 4) {
             navigate('/add-ons', { state: { ...location.state } });
         } else if (currentStep === 5) {
-            navigate('/summary', {state: { ...location.state }});
+            navigate('/summary', { state: { ...location.state } });
         }
     }
 

@@ -115,13 +115,13 @@ const Summary: FC = () => {
                             </NavLink>
                         </div>
 
-                        <span>${location.state.plan?.price}/{location.state.plan?.type}</span>
+                        <span data-cy='summary-plan-cost'>${location.state.plan?.price}/{location.state.plan?.type}</span>
                     </StyledSummaryInclusionsPlan>
 
                     {renderedAddOns}
                 </StyledSummaryInclusions>
 
-                <StyledSummaryTotal>
+                <StyledSummaryTotal data-cy='summary-total'>
                     Total {billingType}
                     <span>${getTotal()}/{location.state.plan?.type}</span>
                 </StyledSummaryTotal>
